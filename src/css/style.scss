@@ -6,10 +6,17 @@
 
 @import 'sass/colors';
 @import 'sass/typography';
-@import 'sass/_layout.scss';
+@import 'sass/spacing';
 
 
 body{
     width: 100%;
     background-color: #050607;
 }
+
+
+
+
+
+
+@import 'sass/layout';
