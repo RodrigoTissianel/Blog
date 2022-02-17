@@ -13,9 +13,9 @@ const Header = () =>{
                 <input type="text" name="search" className="input-search" placeholder="Buscar artigos, podcasts, destaques..."></input>
             </div>
             <ul className="menu">
-                <li> <a href="#" className="nav-link">Categories</a> </li>
-                <li> <a href="#" className="nav-link">About</a> </li>
-                <li> <a href="#" className="nav-link">Contact</a> </li>
+                <li> <a href="https://google.com" className="nav-link">Categories</a> </li>
+                <li> <a href="https://google.com" className="nav-link">About</a> </li>
+                <li> <a href="https://google.com" className="nav-link">Contact</a> </li>
             </ul>
         </header>
         </>
