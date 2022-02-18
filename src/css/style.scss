@@ -15,3 +15,22 @@ body{
 }
 
 @import 'sass/layout';
+
+.add-button{
+    display: block;
+    border: 0;
+    background-color: green;
+    padding: 16px;
+    color: white;
+    font-size: 64px;
+    border-radius: 4px;
+}
+.remove-button{
+    display: block;
+    border: 0;
+    background-color: red;
+    padding: 16px;
+    color: white;
+    font-size: 64px;
+    border-radius: 4px;
+}
