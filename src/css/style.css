@@ -747,23 +747,30 @@ li {
   display: flex;
 }
 
-.add-button {
-  display: block;
-  border: 0;
-  background-color: green;
-  padding: 16px;
-  color: white;
-  font-size: 64px;
-  border-radius: 4px;
+/*
+.add-button{
+    display: block;
+    border: 0;
+    background-color: green;
+    padding: 16px;
+    color: white;
+    font-size: 64px;
+    border-radius: 4px;
 }
-
-.remove-button {
-  display: block;
-  border: 0;
-  background-color: red;
+.remove-button{
+    display: block;
+    border: 0;
+    background-color: red;
+    padding: 16px;
+    color: white;
+    font-size: 64px;
+    border-radius: 4px;
+}
+*/
+button {
   padding: 16px;
-  color: white;
-  font-size: 64px;
+  background-color: white;
+  border: 0;
   border-radius: 4px;
 }
 /*# sourceMappingURL=style.css.map */
