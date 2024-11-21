@@ -5,13 +5,20 @@ import api from '../../../../services/api';
 const MostRecent = ({ content }: IContentProps): React.ReactElement => {
     const [user, setUser] = useState<IUsers | null>(null);
 
+    const fetchUser = async (id_user: number) => {
+        try {
+            const response = await api.get(`/user/${id_user}`);
+            setUser(response.data);
+        } catch (error) {
+            console.error('Erro ao buscar usuário:', error);
+        }
+    };
+
     useEffect(() => {
         if (content) {
-            api.get(`/user/${content.id_user}`).then((response) => {
-                setUser(response.data);
-            });
+            fetchUser(content.id_user);
         }
-    }, []);
+    }, [content]);
 
     function parseDate(dateString: string): { day: string; month: string } {
         const [day, month] = dateString.split(' ');

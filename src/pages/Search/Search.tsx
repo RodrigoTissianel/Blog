@@ -13,19 +13,19 @@ const Search = () => {
     const [search, setSearch] = useState<IPost[]>([]);
     const [form, setForm] = useState<ISearchForm>({ search: '' });
 
-    const SearchPosts = async () => {
-        if (word) {
-            try {
-                const response = await api.get(`/posts/?q=${word}`);
-                setSearch(response.data);
-            } catch (error) {
-                console.error('Erro ao buscar dados:', error);
-            }
+    const SearchPosts = async (word: string) => {
+        try {
+            const response = await api.get(`/posts/?q=${word}`);
+            setSearch(response.data);
+        } catch (error) {
+            console.error('Erro ao buscar dados:', error);
         }
     };
 
     useEffect(() => {
-        SearchPosts();
+        if (word) {
+            SearchPosts(word);
+        }
     }, [word]);
 
     return (

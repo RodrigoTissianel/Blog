@@ -15,17 +15,24 @@ const Post = () => {
     const [user, setUser] = useState<IUsers | null>(null);
     const { idPost } = useParams();
 
+    const fetchPostAndUser = async () => {
+        try {
+            const postResponse = await api.get('/posts/' + idPost);
+            setPost(postResponse.data);
+
+            const userResponse = await api.get(
+                '/user/' + postResponse.data.id_user
+            );
+            setUser(userResponse.data);
+        } catch (error) {
+            console.error('Erro ao buscar post ou usuário:', error);
+        }
+    };
+
     useEffect(() => {
-        api.get('/posts/' + idPost).then((response) => {
-            setPost(response.data);
-
-            api.get('/user/' + response.data.id_user).then((response) => {
-                setUser(response.data);
-            });
-        });
-
+        fetchPostAndUser();
         scrollTo({ top: 0 });
-    }, []);
+    }, [idPost]);
 
     return (
         <section className="container">
