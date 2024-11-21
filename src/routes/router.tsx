@@ -7,6 +7,7 @@ import Login from '../pages/Login/Login';
 import Profile from '../pages/Profile/Profile';
 import Post from '../pages/Post/Post';
 import Search from '../pages/Search/Search';
+import NotFound from '../pages/NotFound/NotFound';
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             {
                 path: 'search/:word_search',
                 element: <Search />,
+            },
+            {
+                path: '*',
+                element: <NotFound />,
             },
         ],
     },
