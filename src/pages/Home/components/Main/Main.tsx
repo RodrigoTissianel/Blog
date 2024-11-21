@@ -19,7 +19,7 @@ const Main = ({ content }: IContentProps) => {
             <div className="bb-black py-3">
                 <h6 className="color-gray">{content.date}</h6>
                 <h6 className="uppercase color-primary">{content.category}</h6>
-                <Link to={'/Post/' + content.id}>
+                <Link to={`/Post/${content.id}`}>
                     <h4 className="mt-1">{content.title}</h4>
                 </Link>
                 <p className="mt-1">{content.resume}</p>

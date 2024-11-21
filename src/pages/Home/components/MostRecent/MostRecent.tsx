@@ -13,8 +13,6 @@ const MostRecent = ({ content }: IContentProps): React.ReactElement => {
         }
     }, []);
 
-    console.log(content);
-
     function parseDate(dateString: string): { day: string; month: string } {
         const [day, month] = dateString.split(' ');
         const formattedMonth =
@@ -40,7 +38,7 @@ const MostRecent = ({ content }: IContentProps): React.ReactElement => {
                         <h6 className="uppercase color-primary">
                             {content.category}
                         </h6>
-                        <a href="" className="link-title">
+                        <a href={`/Post/${content.id}`} className="link-title">
                             <h4 className="mt-1">{content.title}</h4>
                         </a>
 
