@@ -327,3 +327,22 @@ $gutter: 32px;
         }
     }
 }
+
+.profile {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+}
+
+.profile-big {
+    width: 128px;
+    height: 128px;
+
+    border-radius: 50%;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 2px solid $primary-normal;
+}
