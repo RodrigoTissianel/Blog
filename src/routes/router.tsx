@@ -6,6 +6,7 @@ import Contact from '../pages/Contact/Contact';
 import Login from '../pages/Login/Login';
 import Profile from '../pages/Profile/Profile';
 import Post from '../pages/Post/Post';
+import Search from '../pages/Search/Search';
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: 'post/:idPost',
                 element: <Post />,
+            },
+            {
+                path: 'search/:word_search',
+                element: <Search />,
             },
         ],
     },
