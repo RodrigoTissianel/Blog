@@ -5,6 +5,7 @@ import About from '../pages/About/About';
 import Contact from '../pages/Contact/Contact';
 import Login from '../pages/Login/Login';
 import Profile from '../pages/Profile/Profile';
+import Post from '../pages/Post/Post';
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: 'profile',
                 element: <Profile />,
+            },
+            {
+                path: 'post/:idPost',
+                element: <Post />,
             },
         ],
     },
